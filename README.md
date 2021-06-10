@@ -24,7 +24,14 @@ For this example I decided that a client server model would be the best option, 
 ## Next steps
 
 ### Testing
-We have to create tests for the critical parts of the application, in this case I will test that the possible id collisions are handled without error, that the redirection from a short url to the original url works well and that the url is validated before creating the short url.
+We have to create tests for the critical parts of the application, in this case I will test:
+
+- That the possible id collisions are handled without error
+- The redirection from a short url to the original url works well
+- The url is validated before creating the short url
+- All the url components are saved and works well on the redirection
+- That weirds urls work as well
+- Load test
 
 ### Performance
 If we discover performance issues with the current solution and the DB were the bottleneck we could explore options to improve the performance of the DB, like sharding. Another option could be to allowing eventual consistency on our application, and given that there aren't a lot of relations within our data model it will be easy to use some NoSQL DB, but we will have to make changes to the unique short codes generation to avoid collisions.
