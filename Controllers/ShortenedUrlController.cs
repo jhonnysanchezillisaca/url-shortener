@@ -17,7 +17,7 @@ namespace UrlShortener.Controllers
             _context = context;
         }
 
-        // Catch all remaining routes
+        // GET: Catch all remaining routes
         [Route("/{**url}")]
         [HttpGet(Order = int.MaxValue)]
         [ApiExplorerSettings(IgnoreApi = true)]
@@ -60,7 +60,6 @@ namespace UrlShortener.Controllers
             }
 
             return id;
-
         }
 
         private bool ExistsId(string id)
