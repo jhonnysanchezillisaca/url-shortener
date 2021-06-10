@@ -6,7 +6,7 @@ using UrlShortener.Models;
 
 namespace UrlShortener.Controllers
 {
-    [Route("api/shorten")]
+    [Route("shorten")]
     [ApiController]
     public class ShortenedUrlController : ControllerBase
     {
