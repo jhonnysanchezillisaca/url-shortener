@@ -1,4 +1,4 @@
-## Url shortener
+# Url shortener
 
 This project consist on an API that shortens urls and redirects the shortened urls to the original url. We are using ASP.NET Core for the API, with EF Core as the ORM and an in memory database (probably an ORM is not necessary for a project like this, but it was faster for me at the time)
 
