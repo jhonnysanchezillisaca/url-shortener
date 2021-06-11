@@ -4,6 +4,10 @@ This project consist on an API that shortens urls and redirects the shortened ur
 
 I am using a in memory data store, so the shortened urls are lost after some time. You can try it in this url https://jsurl.azurewebsites.net/swagger/index.html
 
+### Usage
+Create a short url: `POST /shorten?url={urlToShorten}` returns the shortCode for the url
+Navigate to original url: `GET /{shortCode}` redirects to the original url
+
 The API is deployed on Azure App Service, on the free tier, so probably the first load will be slow as in the free tier the Appservice is shut down after some time if there are no new request.
 
 ## Overview
