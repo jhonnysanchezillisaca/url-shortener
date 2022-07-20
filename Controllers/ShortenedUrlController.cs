@@ -56,7 +56,7 @@ namespace UrlShortener.Controllers
 
             if (ExistsId(id))
             {
-                GenerateId();
+                return GenerateId();
             }
 
             return id;
